@@ -6,7 +6,7 @@ import { IWeather } from "@/type";
 
 export default function Home() {
   const [data, setData] = useState<IWeather>();
-  const [search, setSearch] = useState("yemen");
+  const [search, setSearch] = useState("Riyadh");
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch(
@@ -18,9 +18,10 @@ export default function Home() {
         data: json.data,
         minutely: json.minutely,
       });
-      console.log(data);
     };
-    fetchData();
+    if (search.trim()) {
+      fetchData();
+    }
   }, [search]);
 
   return (
