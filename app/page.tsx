@@ -1,5 +1,5 @@
 "use client";
-import { Divide, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import WeatherApp from "./WeathApp";
 import { useEffect, useState } from "react";
 import { IWeather } from "@/type";

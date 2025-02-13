@@ -10,7 +10,6 @@ import {
   Eye,
   CloudSnow,
   Compass,
-  Search,
 } from "lucide-react";
 
 const WeatherApp = ({ data }: { data: IWeather }) => {
